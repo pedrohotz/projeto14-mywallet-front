@@ -22,6 +22,12 @@ display: flex;
 flex-direction: column;
 justify-content: space-around;
 align-items: center;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 `
 const StyledInput = styled.input`
  width: 326px;

@@ -2,11 +2,14 @@
 import { ContainerWallet,StyledHeader,ContainerTransactions,ContainerButtons,ButtonTransaction,RegisterValue } from "./sharedStyled/styledcomponents";
 import iconLogout from '../img/iconLogout.png';
 import {AiOutlinePlusCircle,AiOutlineMinusCircle} from 'react-icons/ai';
+import { useContext } from "react";
+import UserContext from "../contexts/usercontext";
 export default function Home(){
+    const {user} = useContext(UserContext);
     return(
         <ContainerWallet>
             <StyledHeader>
-                <h1>Olá,Fulano</h1>
+                <h1>Olá, {user.name}</h1>
                 <img src={iconLogout} alt="logoutIcon"/>
             </StyledHeader>
             <ContainerTransactions>
