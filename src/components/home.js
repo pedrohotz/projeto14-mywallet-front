@@ -4,8 +4,21 @@ import iconLogout from '../img/iconLogout.png';
 import {AiOutlinePlusCircle,AiOutlineMinusCircle} from 'react-icons/ai';
 import { useContext } from "react";
 import UserContext from "../contexts/usercontext";
+import { getHistory } from "../service/api";
+import { useEffect, useState } from "react/cjs/react.development";
+import dayjs from "dayjs";
 export default function Home(){
     const {user} = useContext(UserContext);
+    const [history, setHistory] = useState([]);
+
+    useEffect(() => {
+        getHistory(user.token).then((res)=> {
+            setHistory(res.data);
+        })
+        // eslint-disable-next-line
+    },[])
+
+    console.log(history);
     return(
         <ContainerWallet>
             <StyledHeader>
@@ -13,14 +26,21 @@ export default function Home(){
                 <img src={iconLogout} alt="logoutIcon"/>
             </StyledHeader>
             <ContainerTransactions>
-                {/* <h2 className="not-found">Não há registros de entrada ou saída</h2> */}
+                {history.length === 0 ? <h2 className="not-found">Não há registros de entrada ou saída</h2> : 
+                    
                 <RegisterValue>
-                    <div className="date-desc">
-                        <span className="date">30/11</span>
-                        <span className="desc">Almoço Mãe</span>
-                    </div> 
-                        <span className="value">39,90</span>
+                    {history.map((element) => {
+                        return(      
+                            <>
+                                <div className="date-desc">
+                                    <span className="date">{dayjs(element.date).format('DD/MM')}</span>
+                                    <span className="desc">{element.description}</span>
+                                </div> 
+                                <span className="value">{element.value}</span>
+                            </>)
+                    })}
                 </RegisterValue>
+                }
                 <div className="saldo">
                     <span className="span-saldo"> SALDO</span>
                     <span className="value-saldo">2849,96</span>

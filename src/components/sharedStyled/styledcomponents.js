@@ -100,9 +100,11 @@ background-color: #FFFFFF;
 display: flex;
 align-items: flex-start;
 
-
  .not-found{
      text-align: center;
+     align-items: center;
+     justify-content: center;
+     margin-top: 120px;
      padding: 50px;
      font-family: 'Raleway',sans-serif;
      font-size: 20px;
@@ -185,7 +187,6 @@ height: 40px;
     color: #C70000;
     margin-right: 12px;
   }
-
 `
 
 export {

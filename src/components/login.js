@@ -4,6 +4,7 @@ import { useContext,useState,useEffect } from "react"
 import { login } from "../service/api";
 import { useHistory } from "react-router";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 export default function Login(){
     const {user,setUser} = useContext(UserContext);
     const [email,setEmail] = useState("");
@@ -47,6 +48,13 @@ export default function Login(){
                 text: "Não foi possível realizar o login neste momento"
             })
         }
+        else if(statusCode === 400){
+            Swal.fire({
+                icon: "error",
+                title: "Ops...",
+                text: "Campos inválidos"
+            }) 
+        }
     }
 
     return(
@@ -58,7 +66,9 @@ export default function Login(){
                     <StyledInput placeholder="Senha" value={senha} onChange={(event) => setSenha(event.target.value)} type="password" required></StyledInput>
                     <StyledButton type="submit">Entrar</StyledButton>
                 </form>
-                <StyledLink>Primeira vez? Cadastre-se!</StyledLink>
+                <Link to="/sign-up">
+                    <StyledLink>Primeira vez? Cadastre-se!</StyledLink>
+                </Link>
             </InputContainer>
         </Container>
     )
