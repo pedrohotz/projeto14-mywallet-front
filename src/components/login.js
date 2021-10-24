@@ -14,9 +14,6 @@ export default function Login(){
         if(user){
             history.push("/home");
         }
-        else{
-            history.push("/");
-        }
          // eslint-disable-next-line
     },[user]);
 
@@ -31,6 +28,7 @@ export default function Login(){
 
     function loginSucess(response){
         setUser(response.data);
+        localStorage.setItem('@user',JSON.stringify(response.data));
     }
     function loginFailure(response){
         const statusCode = response.response.status
@@ -66,7 +64,7 @@ export default function Login(){
                     <StyledInput placeholder="Senha" value={senha} onChange={(event) => setSenha(event.target.value)} type="password" required></StyledInput>
                     <StyledButton type="submit">Entrar</StyledButton>
                 </form>
-                <Link to="/sign-up">
+                <Link to="/sign-up" style={{textDecoration:"none"}}>
                     <StyledLink>Primeira vez? Cadastre-se!</StyledLink>
                 </Link>
             </InputContainer>

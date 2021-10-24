@@ -77,11 +77,6 @@ h1{
      color: #FFFFFF;
      font-weight: bold;
  }
- .logout{
-     font-size: 26px;
-     background-color: #FFFFFF;
-
- }
 `
 const ContainerWallet = styled.div`
 width: 100vw;
@@ -165,15 +160,14 @@ height: 100vh;
 background-color:#8C11BE;
 display: flex;
 flex-direction: column;
+align-items: center;
 `
 const RegisterValue = styled.div`
 display: flex;
-justify-content: space-between;
-align-items: center;
+flex-direction: column;
 font-family: 'Raleway',sans-serif;
 font-size: 16px;
 width: 100%;
-height: 40px;
 
   .date{
       color: #C6C6C6;
@@ -182,11 +176,19 @@ height: 40px;
   }
   .desc{
       color: #000000;
+      font-weight: bold;
   }
-  .value{
-    color: #C70000;
-    margin-right: 12px;
+  .element{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 30px;
   }
+`
+const StyledValue = styled.span`
+color: ${props => props.entrada ? "#03AC00" : "#C70000"};
+margin-right: 12px;
 `
 
 export {
@@ -202,4 +204,5 @@ export {
     ButtonTransaction,
     ContainerValues,
     RegisterValue,
+    StyledValue,
 }

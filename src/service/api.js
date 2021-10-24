@@ -25,9 +25,21 @@ function getHistory(token){
     return promisse;
 }
 
+function sendEntry(token,body){
+    const config = createHeaders(token)
+    const promisse = axios.post(`${baseURL}/sendEntry`,body,config);
+    return promisse;
+}
+function sendOutput(token,body){
+    const config = createHeaders(token)
+    const promisse = axios.post(`${baseURL}/sendOutput`,body,config);
+    return promisse;
+}
 
 export{
     login,
     getHistory,
     cadastro,
+    sendEntry,
+    sendOutput,
 }

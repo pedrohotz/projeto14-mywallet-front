@@ -8,8 +8,15 @@ import Output from './components/output';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import UserContext from './contexts/usercontext';
 import { useState } from 'react';
+import { useEffect } from 'react/cjs/react.development';
 function App() {
   const [user,setUser] = useState(null);
+  useEffect(()=>{
+    const userData = localStorage.getItem('@user');
+    if(userData){
+      setUser(JSON.parse(userData));
+    }
+  },[]);
   console.log(user);
   return (
     <BrowserRouter>

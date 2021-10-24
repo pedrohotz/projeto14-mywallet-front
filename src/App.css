@@ -42,5 +42,10 @@ table {
 	border-spacing: 0;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Saira+Stencil+One&display=swap');

@@ -10,7 +10,8 @@ export default function Register(){
     const [senha,setSenha] = useState('');
     const [cSenha,setcSenha] = useState('');
     let history = useHistory();
-    function cadastrar(){
+    function cadastrar(event){
+        event.preventDefault();
         if(senha !== cSenha){
             Swal.fire({
                 icon: "error",
@@ -47,7 +48,7 @@ export default function Register(){
                     <StyledInput placeholder="Confirme a senha" type="password" required value={cSenha} onChange={(e) => setcSenha(e.target.value)}></StyledInput>
                     <StyledButton type="submit">Cadastrar</StyledButton>
                 </form>
-                <Link to="/">
+                <Link to="/" style={{textDecoration:"none"}}>
                 <StyledLink>Já tem uma conta? Entre agora!</StyledLink>
                 </Link>
             </InputContainer>
