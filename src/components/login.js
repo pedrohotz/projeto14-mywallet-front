@@ -31,29 +31,13 @@ export default function Login(){
         localStorage.setItem('@user',JSON.stringify(response.data));
     }
     function loginFailure(response){
-        const statusCode = response.response.status
-        if(statusCode === 401){
             Swal.fire({
                 icon: "error",
                 title: "Ops...",
                 text: "Email ou senha incorretos"
             })
         }
-        else if (statusCode === 500) {
-            Swal.fire({
-                icon: "error",
-                title: "Ops...",
-                text: "Não foi possível realizar o login neste momento"
-            })
-        }
-        else if(statusCode === 400){
-            Swal.fire({
-                icon: "error",
-                title: "Ops...",
-                text: "Campos inválidos"
-            }) 
-        }
-    }
+    
 
     return(
         <Container>
