@@ -7,8 +7,7 @@ import Entry from './components/entry';
 import Output from './components/output';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import UserContext from './contexts/usercontext';
-import { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useState, useEffect } from 'react';
 function App() {
   const [user,setUser] = useState(null);
   useEffect(()=>{

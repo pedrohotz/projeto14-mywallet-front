@@ -1,4 +1,4 @@
-import { useState } from "react/cjs/react.development"
+import { useState } from "react"
 import { Container,StyledInput,StyledButton,StyledLink,InputContainer } from "./sharedStyled/styledcomponents"
 import { cadastro } from "../service/api";
 import Swal from "sweetalert2";

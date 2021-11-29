@@ -5,7 +5,7 @@ import {AiOutlinePlusCircle,AiOutlineMinusCircle} from 'react-icons/ai';
 import { useContext } from "react";
 import UserContext from "../contexts/usercontext";
 import { getHistory } from "../service/api";
-import { useEffect, useState } from "react/cjs/react.development";
+import { useEffect, useState } from "react";
 import dayjs from "dayjs";
 import { Link } from "react-router-dom";
 import Loading from "./shared/Loading";
