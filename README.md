@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+<h1 align="center"> <img src="./public/logo.png"></h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Description
+My wallet is a mobile only aplication that is made to save your transactions, in this app you are able to create an account and login to see all your input and output transactions, with a total balace. 
 
-## Available Scripts
+# Layout
 
-In the project directory, you can run:
+<div align="center">
+ <img src="./public/login.png" alt="Home page" height="333"/>
+ <img src="./public/register.png" alt="login page" height="333"/>
+ <img src="./public/home.png" alt="register page" height="333"/>
+ <img src="./public/entry.png" alt="plans page" height="333"/>
+ <img src="./public/entryexample.png" alt="plans page" height="333"/>
+</div>
 
-### `npm start`
+ Figma file <a href="https://www.figma.com/file/p37uJdpZWRLED7YEwDFfUd/MyWallet">here</a>
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+# Getting started
 
-### `npm test`
+## Running on [vercel](https://projeto14-mywallet-front.vercel.app)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This project needs backend running to work,
+to run the backend, follow the instructions on [projeto14-mywallet-back](https://github.com/pedrohotz/projeto14-mywallet-back)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The following tools were used in the construction of the project:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Frontend**  ([React](https://reactjs.org/))
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   **[Axios](https://github.com/axios/axios)**
+-   **[Dayjs](https://github.com/iamkun/dayjs)**
+-   **[React-icons](https://github.com/react-icons/react-icons)**
+-   **[React-router-dom](https://github.com/remix-run/react-router)**
+-   **[React-loader-spinner](https://www.npmjs.com/package/react-loader-spinner)**
+-   **[Styled-components](https://github.com/styled-components/styled-components)**
+-   **[SweetAlert2](https://github.com/sweetalert2/sweetalert2)**
 
-### `npm run eject`
+---
+## How to contribute
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Fork the project.
+2. Create a new branch with your changes: `git checkout -b feat/myFeatureName`
+3. For each feature implemented, make a commit specifying what was done
+4. Submit your changes: `git push -u origin feat/myFeatureName`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
+## Author
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Developed by Pedro Hotz Bronzato.
