@@ -16,7 +16,6 @@ function App() {
       setUser(JSON.parse(userData));
     }
   },[]);
-  console.log(user);
   return (
     <BrowserRouter>
       <UserContext.Provider value={{user,setUser}}>

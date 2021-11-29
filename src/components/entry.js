@@ -17,7 +17,6 @@ export default function Entry(){
             value,
             description,
         }
-        console.log(value,description);
         sendEntry(user.token,body).then((res)=>{
             Swal.fire({
                 icon: "success",
